@@ -5,6 +5,7 @@ function func1(data) {
     this.name = data;           //behaves as a constructor
 }
 
+
 //add a property to function prototype
 //objects affected by constructor calls of func1 also has access to this new property
 func1.prototype.show = function () {
@@ -25,3 +26,9 @@ console.log(a.hasOwnProperty("show"));      //false
 console.log(b.hasOwnProperty("show"));      //false
 console.log((Object.getPrototypeOf(a)).hasOwnProperty("show"));     //true
 console.log((Object.getPrototypeOf(b)).hasOwnProperty("show"));     //true
+
+
+//following all constructor points to same function, func1
+console.log(func1.prototype.constructor === func1);
+console.log(a.constructor === func1);
+console.log(a.constructor === func1);

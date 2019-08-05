@@ -26,7 +26,7 @@ console.log(a.constructor === func1);           //but here "a" does not actually
 
 //------------------------------------------------------
 
-//when function returns and object
+//when function returns an object
 
 function func2() {
     console.log("func2 executed");
